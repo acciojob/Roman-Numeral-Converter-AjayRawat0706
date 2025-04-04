@@ -8,16 +8,16 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
-   let roman = "";
+  let result = '';
 
-    for (let [symbol, value] of obj) {
-        while (num >= value) {
-            roman += symbol;
-            num -= value;
-        }
+  for (let [symbol, value] of romanMap) {
+    while (num >= value) {
+      result += symbol;
+      num -= value;
     }
+  }
 
-    return roman;
+  return result;
   //your code here
 
 }
